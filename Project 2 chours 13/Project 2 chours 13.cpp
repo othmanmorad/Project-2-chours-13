@@ -17,6 +17,7 @@ int main()
 	cout << "\nFront Item : " << MyQueue.front();
 	cout << "\nBack Item : " << MyQueue.back();
 
+	cout << endl;
 	cout << "\n\nQueue After Removing 2 Items: ";
 	MyQueue.pop();
 	MyQueue.pop();
