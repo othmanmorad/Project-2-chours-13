@@ -439,7 +439,7 @@ public:
 		return Counter;
 	}
 
-
+	// Update Item
 	bool UpdateItem(int Index, int NewValue)
 	{
 		Node* ItemNode = GetNode(Index);
@@ -455,6 +455,7 @@ public:
 
 	}
 
+	// Insert After Index
 	bool InsertAfterIndex(int Index, T Value)
 	{
 		Node* IteamNode = GetNode(Index);

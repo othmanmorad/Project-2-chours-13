@@ -22,5 +22,45 @@ int main()
 	MyQueue.pop();
 	MyQueue.pop();
 	MyQueue.print();
+
+
+	cout << "==================================================================================\n";	
+
+	MyQueue.push(5);
+	MyQueue.push(6);
+	MyQueue.push(7);
+	MyQueue.push(8);
+	MyQueue.push(9);
+	MyQueue.print();
+
+
+	cout << "\nGet Item at Index 1 : ";
+	cout<<MyQueue.GetItem(1);
+
+
+	cout << "\n\nQueue After Reversing: ";
+	MyQueue.Reverse();
+	MyQueue.print();
+
+	cout << "\nUpdate Item at Index 2 to 10: ";	
+	MyQueue.UpdateItem(2, 10);
+	MyQueue.print();
+
+	cout << "\nInsert After Index 1 with Value 20: ";
+	MyQueue.InsertAfter(1, 20);
+	MyQueue.print();
+
+	cout << "\nInsert At Biginning with Value 30: ";
+	MyQueue.InsertAtFront(30);
+	MyQueue.print();
+
+
+	cout << "\nInsert At End with Value 40: ";
+	MyQueue.InsertAtBack(40);
+	MyQueue.print();
+
+	cout << "\nClear Queue: ";	
+	MyQueue.Clear();
+	MyQueue.print();
 }
 

@@ -6,12 +6,12 @@ template <class T>
 class clsMyQueue
 {
 	// Queue is a Data Structure that Follows the First In First Out (FIFO) Principle, where the First Item Added to the Queue is the First Item to be Removed from the Queue. The Main Operations of a Queue are Enqueue (Adding an Item to the Back of the Queue) and Dequeue (Removing an Item from the Front of the Queue). In this Implementation, we will Use a Doubly Linked List to Implement the Queue, where the Front of the Queue will be at the Head of the List and the Back of the Queue will be at the Tail of the List.
-	protected:
+protected:
 
-		// Doubly Linked List to Store the Items in the Queue
-		//composition relationship between Queue and Doubly Linked List, where the Queue class contains an instance of the Doubly Linked List class to manage the items in the queue.
-		clsDblLinkedList<int> MyList;
-		
+	// Doubly Linked List to Store the Items in the Queue
+	//composition relationship between Queue and Doubly Linked List, where the Queue class contains an instance of the Doubly Linked List class to manage the items in the queue.
+	clsDblLinkedList<int> MyList;
+
 public:
 
 	// Enqueue (Adding an Item to the Back of the Queue)
@@ -54,8 +54,48 @@ public:
 	// Get Back Item
 	T back()
 	{
-		return MyList.GetItem(MyList.Size() -1);
+		return MyList.GetItem(MyList.Size() - 1);
 	}
+
+
+	T GetItem(int Index)
+	{
+		return MyList.GetItem(Index);
+	}
+
+	void Reverse()
+	{
+		MyList.Reverse();
+	}
+
+
+	void UpdateItem(int Index, int NewValue)
+	{
+		return MyList.UpdateItem(Index, NewValue);
+	}
+
+	void InsertAfter(int Index, T Value)
+	{
+		MyList.InsertAfterIndex(Index, Value);	
+	}
+
+	void InsertAtBack(T value)
+	{
+		MyList.InsertAtEnd(value);
+	}
+
+	void InsertAtFront(T value)
+	{
+		MyList.InsertAtBiginning(value);
+	}
+	
+	void Clear()
+	{
+		
+		MyList.Clear();
+	}
+
+
 
 };
 
